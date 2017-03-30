@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>SystemJS loading.</title>
+        <script src="/node_modules/systemjs/dist/system.js"></script>
+        <script src="/systemjs.config.js"></script>   
+        <link href="/style/style.css" rel="stylesheet" ></link>
+    </head>
+    <body>
+        <div id='firstDiv'>
+        </div>
+        <script>
+                SystemJS.import('AmdCjs_game')
+                .then(function(res){
+                    res.Render('firstDiv');
+                });
+        </script>        
+    </body>
+</html>
